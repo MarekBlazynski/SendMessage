@@ -25,52 +25,53 @@
         android:layout_height="match_parent">
 
 
+     <TextView
+         android:id="@+id/tvViewUser"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="32dp"
+         android:layout_marginTop="80dp"
+         android:text="@string/tvUsuario"
+         android:textColor="@android:color/black"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="80dp"
-        android:text="@string/tvUsuario"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+     <EditText
+         android:id="@+id/etUser"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="76dp"
+         android:ems="10"
+         android:hint="@string/etUser"
 
-    <EditText
-        android:id="@+id/etUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+         android:inputType="textPersonName"
+         app:layout_constraintBaseline_toBaselineOf="@+id/tvViewUser"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.71"
+         app:layout_constraintStart_toEndOf="@+id/tvViewUser"
+         app:layout_constraintTop_toTopOf="parent" />
 
-        android:text="@string/etUser"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvUser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toEndOf="@+id/tvUser"
-        app:layout_constraintTop_toTopOf="parent" />
+     <TextView
+         android:id="@+id/tvMessage"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="40dp"
+         android:text="@string/tvMessage"
+         android:textColor="@android:color/black"
+         app:layout_constraintStart_toStartOf="@+id/tvViewUser"
+         app:layout_constraintTop_toBottomOf="@+id/tvViewUser" />
 
-    <TextView
-        android:id="@+id/tvMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/tvMessage"
-        app:layout_constraintStart_toStartOf="@+id/tvUser"
-        app:layout_constraintTop_toBottomOf="@+id/tvUser" />
-
-    <EditText
-        android:id="@+id/etMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/etMessage"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvMessage"
-        app:layout_constraintEnd_toEndOf="@+id/etUser"
-        app:layout_constraintTop_toBottomOf="@+id/etUser" />
+     <EditText
+         android:id="@+id/etMessage"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="24dp"
+         android:ems="10"
+         android:hint="@string/etMessage"
+         android:inputType="textPersonName"
+         app:layout_constraintBaseline_toBaselineOf="@+id/tvMessage"
+         app:layout_constraintEnd_toEndOf="@+id/etUser"
+         app:layout_constraintTop_toBottomOf="@+id/etUser" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

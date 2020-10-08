@@ -24,26 +24,29 @@ public class SendMessageActivity extends AppCompatActivity {
         etMensaje=(EditText)findViewById(R.id.etMessage);
         fab=(FloatingActionButton)findViewById(R.id.fab);
 
-        //Sobreescribimos el método OnClick del floatButtom para hacer que envíe
+        //Sobreescribimos el método OnClick del floatButtom para hacer que envie los datos a otra Activity.
         fab.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
                 bundle.putString("user", etUsuario.getText().toString());
-                bundle.putString("mensaje", etMensaje.getText().toString());
+                bundle.putString("message", etMensaje.getText().toString());
 
                 Enviar(bundle);
             }
         });
 
     }
+
+    /**
+     *
+     * @param bundle encargado de tener guardado los datos
+     */
     public void Enviar (Bundle bundle)//Envia los datos a la otra activity
         {
             Intent intent = new Intent(this,ViewMessageActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
         }
-
-
 }

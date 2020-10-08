@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SendMessage</string>
-    <string name="tvUsuario">Usuario</string>
+    <string name="tvUsuario">Usuario: </string>
     <string name="etUser">Introduzca el usuario</string>
-    <string name="tvMessage">Mensaje</string>
+    <string name="tvMessage">Mensaje: </string>
     <string name="etMessage">Mensaje a enviar</string>
 </resources>
