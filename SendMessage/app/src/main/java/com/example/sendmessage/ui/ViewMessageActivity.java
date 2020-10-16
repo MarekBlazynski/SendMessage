@@ -1,4 +1,4 @@
-package com.example.sendmessage;
+package com.example.sendmessage.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.sendmessage.R;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 

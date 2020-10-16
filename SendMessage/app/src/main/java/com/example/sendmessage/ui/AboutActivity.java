@@ -1,9 +1,10 @@
-package com.example.sendmessage;
+package com.example.sendmessage.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.sendmessage.R;
 import com.vansuita.materialabout.builder.AboutBuilder;
 import com.vansuita.materialabout.views.AboutView;
 

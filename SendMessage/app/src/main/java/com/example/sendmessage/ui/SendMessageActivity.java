@@ -1,4 +1,4 @@
-package com.example.sendmessage;
+package com.example.sendmessage.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.example.sendmessage.ChangeMessageApplication;
+import com.example.sendmessage.R;
+import com.example.sendmessage.model.Message;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class SendMessageActivity extends AppCompatActivity {
@@ -30,8 +33,12 @@ public class SendMessageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("user", etUsuario.getText().toString());
-                bundle.putString("message", etMensaje.getText().toString());
+                //Comentamos las 2 lineas de bundle para implementar mensaje de la clase Creada Model.Message
+
+                //bundle.putString("user", etUsuario.getText().toString());
+                //bundle.putString("message", etMensaje.getText().toString());
+                Message message = new Message("15/10/2020",etMensaje.getText(),((ChangeMessageApplication)getApplication().)
+                bundle.putSerializable("message",message);
 
                 Enviar(bundle);
             }
@@ -46,7 +53,7 @@ public class SendMessageActivity extends AppCompatActivity {
      */
     public void showAbout(View view)
     {
-        Intent intent = new Intent(this,AboutActivity.class);
+        Intent intent = new Intent(this, AboutActivity.class);
         startActivity(intent);
     }
 //region Métodos manejar Activity
@@ -56,7 +63,7 @@ public class SendMessageActivity extends AppCompatActivity {
      */
     public void Enviar (Bundle bundle)//Envia los datos a la otra activity
         {
-            Intent intent = new Intent(this,ViewMessageActivity.class);
+            Intent intent = new Intent(this, ViewMessageActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
         }
