@@ -3,8 +3,12 @@ package com.example.sendmessage;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.Logger;
 
 /**
  * <h1>Funcionalidad de la clase</h1>
@@ -18,9 +22,37 @@ private TextView  tvViewUser;
 private TextView tvViewMessage;
 
     @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_message);
+
+        Logger.addLogAdapter(new AndroidLogAdapter());
+
         tvViewUser = (TextView)findViewById(R.id.tvUsuario);
         tvViewMessage = (TextView)findViewById(R.id.tvMessage);
 

@@ -40,6 +40,17 @@ public class SendMessageActivity extends AppCompatActivity {
     }
 
     /**
+     * Método que se ejecuta cuando se pulsa el botón btAbout
+     * Se  implementó mediante el atributo android:onClick en activity sendMessage
+     * @param view  botón donde se ha realizado click
+     */
+    public void showAbout(View view)
+    {
+        Intent intent = new Intent(this,AboutActivity.class);
+        startActivity(intent);
+    }
+//region Métodos manejar Activity
+    /**
      *
      * @param bundle encargado de tener guardado los datos
      */
@@ -49,4 +60,6 @@ public class SendMessageActivity extends AppCompatActivity {
             intent.putExtras(bundle);
             startActivity(intent);
         }
+        //endregion
+
 }
